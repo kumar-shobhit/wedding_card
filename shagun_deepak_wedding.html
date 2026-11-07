@@ -175,23 +175,9 @@ section{position:relative;padding-block:84px;text-align:center}
 .blessing{max-width:30rem;margin:36px auto 0;font-style:italic;font-size:1.22rem;color:var(--ink-soft)}
 
 /* ================= Story ================= */
-.carousel{position:relative;margin:34px auto 0;max-width:440px}
-.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
-.track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%;scroll-snap-align:center;padding:0 18px}
-.slide figure{margin:0}
-.slide .photo{position:relative;aspect-ratio:4/5;width:100%}
-.slide .photo img{width:100%;height:100%;object-fit:cover;display:block;
+.story-photo{position:relative;aspect-ratio:4/5;width:min(100%,404px);margin:34px auto 0}
+.story-photo img{width:100%;height:100%;object-fit:cover;display:block;
   -webkit-mask-image:radial-gradient(closest-side,#000 62%,rgba(0,0,0,.55) 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 62%,rgba(0,0,0,.55) 82%,transparent 100%)}
-.slide figcaption{font-family:var(--script);font-size:2.2rem;color:var(--ink);margin-top:14px;line-height:1.15}
-.slide .when{display:block;font-family:var(--caps);font-weight:500;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.car-btn{position:absolute;top:40%;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold-soft);background:rgba(251,248,244,.9);color:var(--ink);font-size:1.3rem;cursor:pointer;display:grid;place-items:center;z-index:3}
-.car-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.car-btn.prev{left:-4px}
-.car-btn.next{right:-4px}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
-.dots button{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:var(--gold-soft);opacity:.45;cursor:pointer}
-.dots button[aria-current="true"]{opacity:1;background:var(--gold)}
 
 /* ================= Events ================= */
 .events-list{display:grid;gap:56px;margin-top:30px}
@@ -249,37 +235,6 @@ section{position:relative;padding-block:84px;text-align:center}
 .travel h3{font-family:var(--caps);font-weight:500;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0}
 .travel p{margin:4px 0 0;font-weight:600;font-size:1.12rem;line-height:1.25;color:var(--ink)}
 .travel small{display:block;margin-top:6px;font-size:.95rem;color:var(--ink-soft);line-height:1.35}
-
-/* ================= RSVP ================= */
-.rsvp-card{position:relative;z-index:2;max-width:440px;margin:36px auto 0;background:rgba(255,255,255,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:220px 220px 16px 16px;padding:40px 26px 30px;text-align:left;box-shadow:0 14px 40px rgba(90,70,90,.10);border:1px solid #EFE4DC}
-.rsvp-card .mono{width:54px;margin-bottom:6px}
-.rsvp-card h3{text-align:center;font-family:var(--caps);font-weight:500;letter-spacing:.3em;font-size:1.8rem;margin:0 0 18px}
-.field{display:grid;gap:6px;margin-bottom:16px}
-.field > label,.field > .lbl{font-family:var(--caps);font-weight:500;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-input[type=text]{font:inherit;font-size:1.05rem;color:var(--ink);border:1px solid #E3D8DA;border-radius:8px;padding:10px 12px;background:rgba(251,248,244,.9);width:100%}
-input[type=text]:focus-visible{outline:2px solid var(--gold-soft);border-color:var(--gold)}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.seg input{position:absolute;opacity:0;pointer-events:none}
-.seg label{display:block;text-align:center;padding:9px 6px;border:1px solid #D8CCD0;border-radius:8px;font-size:1.02rem;cursor:pointer;color:var(--ink)}
-.seg input:checked + label{background:var(--ink);color:#fff;border-color:var(--ink)}
-.seg input:focus-visible + label{outline:2px solid var(--gold);outline-offset:2px}
-.stepper{display:grid;grid-template-columns:44px 1fr 44px;border:1px solid #E3D8DA;border-radius:8px;overflow:hidden}
-.stepper button{border:0;background:#F6EDEF;color:var(--ink);font-size:1.2rem;cursor:pointer}
-.stepper output{text-align:center;padding:8px;font-size:1.35rem;font-weight:500;font-variant-numeric:tabular-nums lining-nums}
-.checks{display:grid;gap:8px}
-.checks label{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid #EADFD6;border-radius:8px;font-size:1.05rem;cursor:pointer;background:rgba(255,255,255,.5)}
-.checks label span{margin-left:auto;font-family:var(--caps);font-size:.8rem;letter-spacing:.12em;color:var(--muted)}
-.checks input{accent-color:var(--ink);width:16px;height:16px}
-.send{width:100%;border:0;border-radius:8px;background:var(--ink);color:#fff;font-family:var(--caps);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.95rem;padding:13px;cursor:pointer;margin-top:6px}
-.send:hover{background:#4E4970}
-.send:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.rsvp-note{font-size:.95rem;color:var(--muted);text-align:center;margin:12px 0 0;font-style:italic}
-.err{color:#A2394A;font-size:.95rem;margin:-8px 0 12px;min-height:1em}
-.rsvp-done{text-align:center}
-.rsvp-done p{margin:0}
-.rsvp-done .script{font-family:var(--script);font-size:2.6rem;color:var(--ink)}
-.rsvp-done .sub{font-style:italic;color:var(--ink-soft);font-size:1.1rem}
-.rsvp-done a{display:inline-block;margin-top:16px;background:#2F7A55;color:#fff;text-decoration:none;padding:12px 18px;border-radius:8px;font-family:var(--caps);font-weight:600;font-size:.9rem;letter-spacing:.16em;text-transform:uppercase}
 
 footer{position:relative;padding-block:70px 120px;text-align:center}
 footer .mono{width:70px;margin-bottom:10px}
@@ -463,17 +418,7 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
       <p class="eyebrow">Some chapters are written by destiny</p>
       <h2>Our Story</h2>
       <div class="ornament" aria-hidden="true"><span>✦</span></div>
-      <div class="carousel">
-        <button class="car-btn prev" id="prev" aria-label="Previous photo">‹</button>
-        <div class="track" id="track">
-          <div class="slide"><figure><div class="photo"><img src="https://aaravwedssaisha.netlify.app/img/story1.webp" alt="We found our home" style="object-position:50% 62%"></div><figcaption>We found our home</figcaption><span class="when">San Jose &middot; 2019</span></figure></div>
-          <div class="slide"><figure><div class="photo"><img src="https://aaravwedssaisha.netlify.app/img/story2.webp" alt="Walking towards forever" style="object-position:50% 45%"></div><figcaption>Walking towards forever</figcaption><span class="when">Los Angeles &middot; 2021</span></figure></div>
-          <div class="slide"><figure><div class="photo"><img src="https://aaravwedssaisha.netlify.app/img/story3.webp" alt="She said yes" style="object-position:50% 60%"></div><figcaption>She said yes</figcaption><span class="when">Dubai &middot; 2025</span></figure></div>
-          <div class="slide"><figure><div class="photo"><img src="https://aaravwedssaisha.netlify.app/img/story4.webp" alt="From adventures to forever" style="object-position:50% 50%"></div><figcaption>From adventures to forever</figcaption><span class="when">Goa &middot; 2026</span></figure></div>
-        </div>
-        <button class="car-btn next" id="next" aria-label="Next photo">›</button>
-      </div>
-      <div class="dots" id="dots"></div>
+      <div class="story-photo"><img src="images/engaged.jpeg" alt="Shagun and Deepak celebrating their engagement"></div>
     </div>
   </section>
 
@@ -613,51 +558,6 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     </div>
   </section>
 
-  <!-- ================= RSVP ================= -->
-  <section id="rsvp">
-    <img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-lavender.webp" alt="" style="left:-16%;top:22%">
-    <img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-blush.webp" alt="" style="right:-16%;bottom:8%">
-    <div class="floral flip" style="right:-46px;top:-50px;--dur:8s;--origin:90% 90%" aria-hidden="true"><img src="https://aaravwedssaisha.netlify.app/img/floral1.webp" alt=""></div>
-    <div class="wrap">
-      <p class="eyebrow">Kindly respond by 20th November 2026</p>
-      <h2>Will you join us?</h2>
-      <div class="rsvp-card" id="rsvp-card">
-        <form id="rsvp-form" novalidate>
-          <span class="mono" aria-hidden="true"></span>
-          <h3>RSVP</h3>
-          <div class="field">
-            <label for="r-name">Full name</label>
-            <input type="text" id="r-name" autocomplete="name" placeholder="Enter your name">
-          </div>
-          <p class="err" id="r-err" role="alert"></p>
-          <div class="field">
-            <span class="lbl">Will you be attending?</span>
-            <div class="seg">
-              <input type="radio" name="attend" id="r-yes" value="yes" checked><label for="r-yes">Joyfully accept</label>
-              <input type="radio" name="attend" id="r-no" value="no"><label for="r-no">Regretfully decline</label>
-            </div>
-          </div>
-          <div id="attend-extra">
-            <div class="field">
-              <span class="lbl">Number of guests</span>
-              <div class="stepper">
-                <button type="button" id="g-minus" aria-label="Fewer guests">−</button>
-                <output id="g-count" aria-live="polite">2</output>
-                <button type="button" id="g-plus" aria-label="More guests">+</button>
-              </div>
-            </div>
-            <div class="field">
-              <span class="lbl">Events you'll be joining</span>
-              <div class="checks" id="r-events"></div>
-            </div>
-          </div>
-          <button class="send" type="submit">Send RSVP on WhatsApp</button>
-          <p class="rsvp-note">Your reply opens in WhatsApp, ready to send to the family.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt="" style="left:50%;top:0;translate:-50% 0">
     <div class="wrap">
@@ -683,28 +583,10 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     start:"2026-12-02T18:00:00+05:30",
     end:"2026-12-02T23:00:00+05:30",
     place:"Vardaan Luxury Banquet, Gymkhana Club, Sec-4, Rewari, Haryana",
-    mapQuery:"Vardaan Luxury Banquet Gymkhana Club Sector 4 Rewari Haryana",
-    whatsapp:"919725956266"
+    mapQuery:"Vardaan Luxury Banquet Gymkhana Club Sector 4 Rewari Haryana"
   };
-  const EVENTS = [
-    {name:"Lagan",img:"images/lagan_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush.webp",day:"Monday",date:"30th November",short:"30 Nov",time:"11:15 AM onwards",venue:"The Address by Red Carpet, Greater Noida",alt:"Watercolour illustration of a traditional lagan ceremony"},
-    {name:"Haldi & Sangeet",img:"https://aaravwedssaisha.netlify.app/img/mehendi.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"11:15 AM onwards",venue:"Nakul Vatika, Rewari",alt:"Watercolour of the couple at a brass urli with haldi, parasols and marigolds"},
-    {name:"Chaak & Mehndi",img:"images/mehndi_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush2.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"5:15 PM onwards",venue:"Shagun Aangan, Rewari",alt:"Watercolour of the bride and her friends applying mehendi among marigolds and roses"},
-    {name:"Bhaat",img:"images/bhaat_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-lavender.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"4:15 PM onwards",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of a festive bhaat celebration with family"},
-    {name:"Welcome of Baraat",img:"images/baraatwelcome_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"6:15 PM",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the wedding baraat procession"},
-    {name:"Panigrahan Sanskaar",img:"images/sanskar_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-sage.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"Shubhlagnanusar",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the couple before a red floral mandap with brass lamps"}
-  ];
-  const STORY = [
-    {img:"https://aaravwedssaisha.netlify.app/img/story1.webp",cap:"We found our home",when:"San Jose · 2019",pos:"50% 62%"},
-    {img:"https://aaravwedssaisha.netlify.app/img/story2.webp",cap:"Walking towards forever",when:"Los Angeles · 2021",pos:"50% 45%"},
-    {img:"https://aaravwedssaisha.netlify.app/img/story3.webp",cap:"She said yes",when:"Dubai · 2025",pos:"50% 60%"},
-    {img:"https://aaravwedssaisha.netlify.app/img/story4.webp",cap:"From adventures to forever",when:"Goa · 2026",pos:"50% 50%"}
-  ];
-
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = s => document.querySelector(s);
-  const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-
   /* ================= Wax seal ================= */
   const sealSVG = id => `<svg viewBox="0 0 120 120" aria-hidden="true">
     <defs>
@@ -845,51 +727,6 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     "&details="+encodeURIComponent("We can't wait to celebrate with you. #ShagunWedsDeepak");
   $("#cal-link").href=cal; $("#cal-link-2").href=cal;
   $("#dir-link").href="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(WEDDING.mapQuery);
-
-  /* ================= Story ================= */
-  const track=$("#track"), dots=$("#dots");
-  STORY.forEach((s,i)=>{
-    const b=document.createElement("button"); b.setAttribute("aria-label","Photo "+(i+1)); b.addEventListener("click",()=>go(i)); dots.appendChild(b);
-  });
-  let cur=0;
-  function go(i){cur=(i+STORY.length)%STORY.length; track.scrollTo({left:track.clientWidth*cur,behavior:reduce?"auto":"smooth"});}
-  function syncDots(){cur=Math.round(track.scrollLeft/track.clientWidth); [...dots.children].forEach((d,i)=>d.setAttribute("aria-current",i===cur));}
-  track.addEventListener("scroll",()=>{clearTimeout(track._t);track._t=setTimeout(syncDots,80);});
-  $("#prev").addEventListener("click",()=>go(cur-1)); $("#next").addEventListener("click",()=>go(cur+1));
-  syncDots();
-
-  /* ================= Events ================= */
-  const chk=$("#r-events");
-  EVENTS.forEach((ev,i)=>{
-    const l=document.createElement("label");
-    l.innerHTML=`<input type="checkbox" id="ev-${i}" value="${ev.name}" checked> ${ev.name} <span>${ev.short}</span>`;
-    chk.appendChild(l);
-  });
-
-  /* ================= RSVP ================= */
-  let guests=2; const gOut=$("#g-count");
-  $("#g-minus").addEventListener("click",()=>{guests=Math.max(1,guests-1);gOut.textContent=guests;});
-  $("#g-plus").addEventListener("click",()=>{guests=Math.min(10,guests+1);gOut.textContent=guests;});
-  document.querySelectorAll('input[name=attend]').forEach(r=>r.addEventListener("change",()=>{ $("#attend-extra").hidden=$("#r-no").checked; }));
-  $("#rsvp-form").addEventListener("submit",e=>{
-    e.preventDefault();
-    const name=$("#r-name").value.trim();
-    if(!name){$("#r-err").textContent="Please add your name so the family knows who is replying.";$("#r-name").focus();return;}
-    $("#r-err").textContent="";
-    const yes=$("#r-yes").checked;
-    const evs=[...chk.querySelectorAll("input:checked")].map(i=>i.value);
-    const msg = yes
-      ? `RSVP for ${WEDDING.couple[0]} & ${WEDDING.couple[1]}'s wedding\n\nName: ${name}\nAttending: Joyfully accept\nGuests: ${guests}\nEvents: ${evs.length?evs.join(", "):"None selected"}`
-      : `RSVP for ${WEDDING.couple[0]} & ${WEDDING.couple[1]}'s wedding\n\nName: ${name}\nAttending: Regretfully decline\nSending our love and blessings.`;
-    const url=`https://wa.me/${WEDDING.whatsapp}?text=${encodeURIComponent(msg)}`;
-    const card=$("#rsvp-card");
-    card.innerHTML=`<div class="rsvp-done"><span class="mono" style="width:54px" aria-hidden="true"></span>
-      <p class="script">${yes?"See you there!":"You'll be missed"}</p>
-      <p class="sub">${yes?"Thank you, "+esc(name)+". Tap below to send your RSVP to the family.":"Thank you for letting us know. Tap below to send your note."}</p>
-      <a href="${url}" target="_blank" rel="noopener">Open WhatsApp to send</a>
-      <p class="rsvp-note">Sending to +91 97259 56266</p></div>`;
-    if(yes) confetti(card);
-  });
 
   /* ================= Music ================= */
   const btn=$("#music"), icon=$("#music-icon");
