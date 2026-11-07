@@ -51,9 +51,7 @@ section{position:relative;padding-block:84px;text-align:center}
 .foil{background:linear-gradient(100deg,#8C6A2B 0%,#C9A45E 20%,#9E7A36 38%,#EFD9A0 50%,#9E7A36 62%,#C9A45E 80%,#8C6A2B 100%);background-size:260% 100%;
   -webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 7s linear infinite}
 @keyframes foil{from{background-position:120% 0}to{background-position:-160% 0}}
-.mono{display:block;margin:0 auto;aspect-ratio:445/560;
-  -webkit-mask:var(--mono-mask) center/contain no-repeat;mask:var(--mono-mask) center/contain no-repeat;
-  background:linear-gradient(100deg,#8C6A2B 0%,#C9A45E 22%,#A07C38 40%,#F2DFA8 50%,#A07C38 60%,#C9A45E 80%,#8C6A2B 100%);background-size:260% 100%;animation:foil 7s linear infinite}
+.mono{display:block;margin:0 auto;aspect-ratio:736/920;object-fit:contain;transform:scale(2.5)}
 
 /* ================= Cover ================= */
 #envelope-screen{position:fixed;inset:0;z-index:50;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(16px,3.6vh,32px);
@@ -123,10 +121,9 @@ section{position:relative;padding-block:84px;text-align:center}
 .seal-half svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
 .seal-half.l{clip-path:polygon(0 0,54% 0,46% 38%,55% 62%,47% 100%,0 100%)}
 .seal-half.r{clip-path:polygon(54% 0,100% 0,100% 100%,47% 100%,55% 62%,46% 38%)}
-.seal-mono{position:absolute;left:50%;top:50%;width:40%;aspect-ratio:445/560;transform:translate(-50%,-50%);
-  -webkit-mask:var(--mono-mask) center/contain no-repeat;mask:var(--mono-mask) center/contain no-repeat}
-.seal-mono.hi{background:#FFF3CF;opacity:.55;transform:translate(-50%,calc(-50% + 1.2px))}
-.seal-mono.dk{background:linear-gradient(160deg,#6B4E17,#8C6A2B 60%,#5E430F)}
+.seal-mono{position:absolute;left:50%;top:50%;width:40%;aspect-ratio:736/920;object-fit:contain;transform:translate(-50%,-50%) scale(2.5)}
+.seal-mono.hi{opacity:.55;filter:brightness(1.3);transform:translate(-50%,calc(-50% + 1.2px)) scale(2.5)}
+.seal-mono.dk{filter:brightness(.5) sepia(.35)}
 .env.open .seal-wrap::before,.env.open .seal-wrap::after{display:none}
 .env.open .seal-half.l{transform:translate(-40%,70%) rotate(-28deg);opacity:0}
 .env.open .seal-half.r{transform:translate(40%,70%) rotate(24deg);opacity:0}
@@ -337,7 +334,7 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     <button class="env" id="env" aria-label="Open the invitation">
       <span class="back ptex"></span>
       <span class="letter ptex" aria-hidden="true">
-        <span class="mono"></span>
+        <img class="mono" src="images/logo.png" alt="">
         <span class="l-small">Smt. Kanta Devi &amp; Family</span>
         <span class="l-script">Shagun &amp; Deepak</span>
         <span class="l-small">cordially request the pleasure of your company</span>
@@ -390,7 +387,7 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     <img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-lavender.webp" alt="" style="right:-14%;top:44%">
     <div class="hero-art"><img id="hero-img" src="https://aaravwedssaisha.netlify.app/img/hero.webp" alt="Watercolour garden with stone balustrades, floral urns and a lawn leading into the trees" width="2200" height="917"></div>
     <div class="wrap hero-inner">
-      <span class="mono" role="img" aria-label="Shagun and Deepak monogram"></span>
+      <img class="mono" src="images/logo.png" alt="Shagun and Deepak monogram">
       <div class="inv-host">
         <strong>Smt. Kanta Devi</strong>
         <span class="sub-host">(W/o Late Sh. Satyavir Singh, PTI)</span>
@@ -489,42 +486,44 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
       <div class="ornament" aria-hidden="true"><span>✦</span></div>
       <div class="events-list" id="events-list">
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-blush.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/mehendi.webp" alt="Watercolour illustration of a traditional lagan ceremony"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-blush.webp" alt=""><img class="art" src="images/lagan_final.png" alt="Watercolour illustration of a traditional lagan ceremony"></div>
           <p class="when">Monday &middot; 30th November 2026</p>
           <h3 class="sheen-text">Lagan</h3>
           <p class="meta">11:15 AM onwards &middot; The Address by Red Carpet, Greater Noida</p>
           <a href="https://www.google.com/maps/dir//The+Address+by+Red+Carpet+Trot+Hotel,+Round+about+Sector,+Near+Wipro,+1%262,+and,+Purvanchal+Silver+City+-+2,+Pi+I+%26+II,+Greater+Noida,+Uttar+Pradesh+201310/@28.2016289,76.6199752,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ceb4127b10989:0x6d035bdc10c14125!2m2!1d77.5322687!2d28.481181?hl=en-IN&amp;entry=ttu&amp;g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a>
         </article>
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/haldi.webp" alt="Watercolour of the couple at a brass urli with haldi, parasols and marigolds"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/mehendi.webp" alt="Watercolour of the couple at a brass urli with haldi, parasols and marigolds"></div>
           <p class="when">Tuesday &middot; 1st December 2026</p>
           <h3 class="sheen-text">Haldi &amp; Sangeet</h3>
           <p class="meta">11:15 AM onwards &middot; Nakul Vatika, near Huda Bypass, Rewari</p>
+          <p class="dress"><strong>Dress:</strong> Yellow, Vibrant Hues &amp; Desi Vibes</p>
           <a href="https://www.google.com/maps/dir//Nakul+Vatika,+Nakul+vatika,+Rewari,+Gokalgarh,+Haryana+123401/@28.2034176,76.6246912,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390d5bbe489ce463:0xdf02ea8216d6d243!2m2!1d76.6143343!2d28.2230399?entry=ttu&amp;g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a>
         </article>
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-blush2.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/mehendi.webp" alt="Watercolour of the bride and her friends applying mehendi among marigolds and roses"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-blush2.webp" alt=""><img class="art" src="images/mehndi_final.png" alt="Watercolour of the bride and her friends applying mehendi among marigolds and roses"></div>
           <p class="when">Tuesday &middot; 1st December 2026</p>
           <h3 class="sheen-text">Chaak &amp; Mehndi</h3>
           <p class="meta">5:15 PM onwards &middot; Shagun Aangan, House No. 31, T.P. Scheme 9, Rewari</p>
+          <p class="dress"><strong>Dress:</strong> Rang, Raunak &amp; Riwaayat</p>
           <a href="https://www.google.com/maps/dir//JRM+Kids+School,+T.P.-+SCHEME,+9,+Street+Number+1,+near+Swami+Uma+Bharti+Public+School,+AERD+Society,+Rewari,+Haryana+123401/@28.2089279,76.6193341,127m/data=!3m1!1e3!4m16!1m7!3m6!1s0x390d5aa2b3fddb63:0xbc6dba246254a50e!2sJRM+Kids+School!8m2!3d28.2091592!4d76.6193604!16s%2Fg%2F11bw5_hf9f!4m7!1m0!1m5!1m1!1s0x390d5aa2b3fddb63:0xbc6dba246254a50e!2m2!1d76.6193588!2d28.2091226?entry=ttu&amp;g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a>
         </article>
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-lavender.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/reception.webp" alt="Watercolour of a festive bhaat celebration with family"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-lavender.webp" alt=""><img class="art" src="images/bhaat_final.png" alt="Watercolour of a festive bhaat celebration with family"></div>
           <p class="when">Wednesday &middot; 2nd December 2026</p>
           <h3 class="sheen-text">Bhaat</h3>
           <p class="meta">4:15 PM onwards &middot; Vardaan Luxury Banquet, Gymkhana Club, Sec-4, Rewari</p>
           <a href="https://www.google.com/maps/dir//Gymkhana+Club+Rewari+(+Vardaan+Luxury+Banquet),+Gymkhana+club,+Sector+4,+Rewari,+Haryana+123401/@28.2016288,76.6199752,27319m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x390d51cce76b7247:0xe428c1d4f6c1b0a7!2m2!1d76.6236871!2d28.181689?entry=ttu&amp;g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a>
         </article>
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/wedding.webp" alt="Watercolour of the wedding baraat procession with celebrations"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt=""><img class="art" src="images/baraatwelcome_final.png" alt="Watercolour of the wedding baraat procession with celebrations"></div>
           <p class="when">Wednesday &middot; 2nd December 2026</p>
           <h3 class="sheen-text">Welcome of Baraat</h3>
           <p class="meta">6:15 PM &middot; Vardaan Luxury Banquet, Gymkhana Club, Sec-4, Rewari</p>
           <a href="https://www.google.com/maps/dir//Gymkhana+Club+Rewari+(+Vardaan+Luxury+Banquet),+Gymkhana+club,+Sector+4,+Rewari,+Haryana+123401/@28.2016288,76.6199752,27319m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x390d51cce76b7247:0xe428c1d4f6c1b0a7!2m2!1d76.6236871!2d28.181689?entry=ttu&amp;g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get directions</a>
         </article>
         <article class="event">
-          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-sage.webp" alt=""><img class="art" src="https://aaravwedssaisha.netlify.app/img/wedding.webp" alt="Watercolour of the couple before a red floral mandap with brass lamps"></div>
+          <div class="art-wrap"><img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-sage.webp" alt=""><img class="art" src="images/sanskar_final.png" alt="Watercolour of the couple before a red floral mandap with brass lamps"></div>
           <p class="when">Wednesday &middot; 2nd December 2026</p>
           <h3 class="sheen-text">Panigrahan Sanskaar</h3>
           <p class="meta">Shubhlagnanusar &middot; Vardaan Luxury Banquet, Gymkhana Club, Sec-4, Rewari</p>
@@ -544,7 +543,7 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
       <div class="ornament" aria-hidden="true"><span>✦</span></div>
       <div class="venue-art">
         <img class="wash" src="https://aaravwedssaisha.netlify.app/img/wash-peach.webp" alt="">
-        <img src="https://aaravwedssaisha.netlify.app/img/venue.webp" alt="Watercolour illustration of Ravaya with its sweeping wooden canopy and glass facade" width="1600" height="710">
+        <img src="images/venue.png" alt="Watercolour illustration of Ravaya with its sweeping wooden canopy and glass facade" width="1600" height="710">
       </div>
       <div class="venue-card">
         <div class="vc-date">
@@ -688,12 +687,12 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     whatsapp:"919725956266"
   };
   const EVENTS = [
-    {name:"Lagan",img:"https://aaravwedssaisha.netlify.app/img/mehendi.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush.webp",day:"Monday",date:"30th November",short:"30 Nov",time:"11:15 AM onwards",venue:"The Address by Red Carpet, Greater Noida",alt:"Watercolour illustration of a traditional lagan ceremony"},
-    {name:"Haldi & Sangeet",img:"https://aaravwedssaisha.netlify.app/img/haldi.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"11:15 AM onwards",venue:"Nakul Vatika, Rewari",alt:"Watercolour of the couple at a brass urli with haldi, parasols and marigolds"},
-    {name:"Chaak & Mehndi",img:"https://aaravwedssaisha.netlify.app/img/mehendi.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush2.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"5:15 PM onwards",venue:"Shagun Aangan, Rewari",alt:"Watercolour of the bride and her friends applying mehendi among marigolds and roses"},
-    {name:"Bhaat",img:"https://aaravwedssaisha.netlify.app/img/reception.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-lavender.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"4:15 PM onwards",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of a festive bhaat celebration with family"},
-    {name:"Welcome of Baraat",img:"https://aaravwedssaisha.netlify.app/img/wedding.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"6:15 PM",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the wedding baraat procession"},
-    {name:"Panigrahan Sanskaar",img:"https://aaravwedssaisha.netlify.app/img/wedding.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-sage.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"Shubhlagnanusar",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the couple before a red floral mandap with brass lamps"}
+    {name:"Lagan",img:"images/lagan_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush.webp",day:"Monday",date:"30th November",short:"30 Nov",time:"11:15 AM onwards",venue:"The Address by Red Carpet, Greater Noida",alt:"Watercolour illustration of a traditional lagan ceremony"},
+    {name:"Haldi & Sangeet",img:"https://aaravwedssaisha.netlify.app/img/mehendi.webp",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"11:15 AM onwards",venue:"Nakul Vatika, Rewari",alt:"Watercolour of the couple at a brass urli with haldi, parasols and marigolds"},
+    {name:"Chaak & Mehndi",img:"images/mehndi_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-blush2.webp",day:"Tuesday",date:"1st December",short:"1 Dec",time:"5:15 PM onwards",venue:"Shagun Aangan, Rewari",alt:"Watercolour of the bride and her friends applying mehendi among marigolds and roses"},
+    {name:"Bhaat",img:"images/bhaat_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-lavender.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"4:15 PM onwards",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of a festive bhaat celebration with family"},
+    {name:"Welcome of Baraat",img:"images/baraatwelcome_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-peach.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"6:15 PM",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the wedding baraat procession"},
+    {name:"Panigrahan Sanskaar",img:"images/sanskar_final.png",wash:"https://aaravwedssaisha.netlify.app/img/wash-sage.webp",day:"Wednesday",date:"2nd December",short:"2 Dec",time:"Shubhlagnanusar",venue:"Vardaan Luxury Banquet, Rewari",alt:"Watercolour of the couple before a red floral mandap with brass lamps"}
   ];
   const STORY = [
     {img:"https://aaravwedssaisha.netlify.app/img/story1.webp",cap:"We found our home",when:"San Jose · 2019",pos:"50% 62%"},
@@ -718,7 +717,7 @@ footer .tag{font-family:var(--caps);font-weight:600;font-size:1.1rem;letter-spac
     <circle cx="60" cy="60" r="39" fill="none" stroke="#8E6A28" stroke-width="1.2" opacity=".7"/>
     <circle cx="60" cy="60" r="34" fill="none" stroke="#FFF1C9" stroke-width=".8" stroke-dasharray="1 3" opacity=".8"/>
     <ellipse cx="42" cy="32" rx="15" ry="6" fill="#FFF8E1" opacity=".35" transform="rotate(-30 42 32)"/>
-  </svg><span class="seal-mono hi"></span><span class="seal-mono dk"></span>`;
+  </svg><img class="seal-mono hi" src="images/logo.png" alt=""><img class="seal-mono dk" src="images/logo.png" alt="">`;
   document.querySelector(".seal-half.l").innerHTML=sealSVG("a");
   document.querySelector(".seal-half.r").innerHTML=sealSVG("b");
 
